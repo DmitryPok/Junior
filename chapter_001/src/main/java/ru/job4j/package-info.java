@@ -1,7 +1,7 @@
 /**
  * //TODO add comments.
  *
- * @author Petr Arsentev (parsentev@yandex.ru)
+ * @author Dmitry Poklonov (d.poklonov@mail.ru.ru)
  * @version $Id$
  * @since 0.1
  */
