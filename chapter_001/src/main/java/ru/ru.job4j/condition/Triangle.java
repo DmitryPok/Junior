@@ -20,18 +20,29 @@ public class Triangle {
      */
     private Point a, b, c;
     /**
+     * determine lineAtoB, lineAtoC, lineBtoC.
+     */
+    private double lineAtoB, lineAtoC, lineBtoC;
+    /**
      * @param a координата точки
      * @param b координата точки
      * @param c координата точки
-     * @param lineAtoB отрезок
-     * @param lineAtoC отрезок
-     * @param lineBtoC отрезок
      */
     public Triangle(Point a, Point b, Point c) {
 
-        lineAtoB = distance(a, b);
-        lineAtoC = distance(a, c);
-        lineBtoC = distance(b, c);
+        lineAtoB = a.distance(b);
+        lineAtoC = a.distance(c);
+        lineBtoC = b.distance(c);
+    }
+
+    /**
+     *
+     * @param left left
+     * @param right right
+     * @return dist
+     */
+    public double distance(Point left, Point right) {
+        return -1;
     }
 
     /**
