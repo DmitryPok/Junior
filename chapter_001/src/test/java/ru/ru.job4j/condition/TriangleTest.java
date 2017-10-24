@@ -7,11 +7,9 @@ package ru.ru.job4j.condition;
  * @version $Id$
  * @since 0.1
  */
-
 import org.junit.Test;
 import static org.hamcrest.number.IsCloseTo.closeTo;
 import static org.junit.Assert.assertThat;
-
 
 /**
  * Triangle check.
@@ -19,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class TriangleTest {
     /**
      * Triangle area check.
-
+     */
    @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
         // создаем три объекта класса Point.
@@ -34,22 +32,19 @@ public class TriangleTest {
         double expected = 2D;
         //Проверяем результат и ожидаемое значение.
         assertThat(result, closeTo(expected, 0.1));
-    }*/
+    }
     /**
      * Triangle dist check.
      */
     @Test
     public void whenDistanceDiffPointsThen10() {
-        
         // создаем два объекта класса Point.
         Point left = new Point(0, 0);
         Point right = new Point(0, 10);
         // Создаем объект треугольник и в качестве точек передает null.
         // так как нам не требуется их участие.
-        Triangle triangle = new Triangle(null, null, null);
-
+        Triangle triangle = new Triangle(new Point(1, 2), new Point(3, 4), new Point(5, 6));
         double rsl = triangle.distance(left, right);
-
         assertThat(rsl, closeTo(10, 0.01));
     }
 }
