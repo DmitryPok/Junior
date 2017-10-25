@@ -13,10 +13,15 @@ public class Max {
      * try to equal two int.
      * @param first first
      * @param second first
+     * @param third first
      * @return return max value
      */
     public int max(int first, int second) {
         return (first > second) ?  first : second;
     }
 
-        }
+
+    public int max(int first, int second, int third)  {
+        return max(third, max(first, second));
+    }
+    }
