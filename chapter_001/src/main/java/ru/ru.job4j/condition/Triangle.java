@@ -24,6 +24,8 @@ public class Triangle {
      */
     private double ab, ac, bc;
 
+
+
     /**
      * @param a координата точки
      * @param b координата точки
@@ -34,9 +36,7 @@ public class Triangle {
         this.a = a;
         this.b = b;
         this.c = c;
-        ab = a.distance(b);
-        ac = a.distance(c);
-        bc = b.distance(c);
+
     }
 
     /**
@@ -57,6 +57,8 @@ public class Triangle {
         return  Math.sqrt(Math.pow(right.getY() - left.getY(), 2) + Math.pow(right.getX() - left.getX(), 2));
     }
 
+
+
     /**
      * Метод вычисления периметра по длинам сторон.
      *
@@ -71,6 +73,9 @@ public class Triangle {
      * */
 
     public double period(double ab, double ac, double bc) {
+        ab = a.distance(b);
+        ac = a.distance(c);
+        bc = b.distance(c);
 
         return (ab + ac + bc) / 2;
     }

@@ -43,7 +43,7 @@ public class TriangleTest {
         Point right = new Point(0, 10);
         // Создаем объект треугольник и в качестве точек передает null.
         // так как нам не требуется их участие.
-        Triangle triangle = new Triangle(new Point(1, 2), new Point(3, 4), new Point(5, 6));
+        Triangle triangle = new Triangle(null, null, null);
         double rsl = triangle.distance(left, right);
         assertThat(rsl, closeTo(10, 0.01));
     }
