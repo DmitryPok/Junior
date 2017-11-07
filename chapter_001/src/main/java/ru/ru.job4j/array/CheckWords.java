@@ -13,6 +13,7 @@ public class  CheckWords {
 
     /**
      * Array duplicate.
+     *
      * @param strin strin.
      * @return return array value.
      */
@@ -25,6 +26,7 @@ public class  CheckWords {
 
     /**
      * Array duplicate.
+     *
      * @param arrSmall array.
      * @param arrBig   array.
      * @return return boolean value.
@@ -39,7 +41,7 @@ public class  CheckWords {
                     break;
                 } else {
                     verd[ind] = false;
-                    }
+                }
             }
         }
         for (int ind = 0; ind < verd.length; ind++) {
@@ -47,7 +49,7 @@ public class  CheckWords {
                 verdict = verd[ind];
                 break;
             } else {
-                verdict = true;
+                verdict = false;
             }
         }
         return verdict;
