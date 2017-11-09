@@ -21,9 +21,16 @@ public class CheckWordsTest {
         CheckWords checker = new CheckWords();
         String origin = "Привет";
         String sub = "иве";
-        char[] arrBig = checker.createArr(origin);
-        char[] arrSmall = checker.createArr(sub);
-        boolean result = checker.innerCheck(arrSmall, arrBig);
+        boolean result = checker.innerCheck(sub.toCharArray(), origin.toCharArray());
         assertThat(result, is(true));
+    }
+
+    @Test
+    public void whenSmallWordNotInBigWord() {
+        CheckWords checker = new CheckWords();
+        String origin = "Привет";
+        String sub = "кря";
+        boolean result = checker.innerCheck(sub.toCharArray(), origin.toCharArray());
+        assertThat(result, is(false));
     }
 }
