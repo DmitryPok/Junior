@@ -17,16 +17,24 @@ public class  CheckWords {
      */
     public boolean innerCheck(char[] smallWord, char[] bigWord) {
         int wordCheker = 0;
+        boolean verdict = false;
         for (int ind = 0; ind < smallWord.length; ind++) {
             for (int indx = 0; indx < bigWord.length; indx++) {
                 if (smallWord[ind] == bigWord[indx]) {
                     wordCheker++;
                     if (wordCheker == smallWord.length) {
-                        return true;
+                        verdict = true;
                     }
                 }
             }
         }
-        return false;
+        return verdict;
+    }
+    public static void main(String[] args) {
+        CheckWords cheker = new CheckWords();
+        String origin = "Привет";
+        String sub = "иве";
+        System.out.println(cheker.innerCheck(sub.toCharArray(), origin.toCharArray()));
+
     }
 }
